@@ -1,4 +1,4 @@
-<?php session_start(); 
+<?php session_start();
 
 require_once("misc.php");
 
@@ -24,8 +24,8 @@ include "header.php";
 ?>
 <h1>IMS LTI 1.1 Consumer Certification Setup</h1>
 <p>
-<a href="lmscert.cfm">Test Description</a> | 
-<a href="lmsstatus.php">Test Status</a> 
+<a href="lmscertdesc.php">Test Description</a> |
+<a href="lmsstatus.php">Test Status</a>
 <p>
 This screen allows you to configure the LTI 1.1 Testing Environment
 or to reset the testing session and start over.
@@ -46,7 +46,7 @@ oauth_consumer_secret
 </p>
 <p>
 <input type="submit" value="Set Data in Session">
-<input type="submit" value="Clear All" 
+<input type="submit" value="Clear All"
           onclick="window.location='lmssetup.php?certaction=reset'; return false;"/>
 </p>
 </form>

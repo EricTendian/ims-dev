@@ -1,4 +1,4 @@
-<?php session_start(); 
+<?php session_start();
 
 require_once("misc.php");
 
@@ -27,13 +27,13 @@ include "header.php";
 ?>
 <h1>IMS LTI 1.1 Provider Certification Setup</h1>
 <p>
-<a href="toolcert.cfm">Test Description</a> |
-<a href="toolcert.php">Start Test</a> 
+<a href="toolcert2.php">Test Description</a> |
+<a href="toolcert.php">Start Test</a>
 <p>
 This screen allows you to configure the LTI 1.1 Testing Environment
 or to reset the testing session and start over.
 </p>
-<?php 
+<?php
 if ( isset($_REQUEST['oauth_consumer_key']) and
      isset($_REQUEST['oauth_consumer_secret']) and
      strlen($_REQUEST['oauth_consumer_secret']) < 10 ) {
@@ -43,7 +43,7 @@ if ( isset($_REQUEST['oauth_consumer_key']) and
 <form method="post">
 <p>
 Software Being Tested:
-<input type="text" name="software" 
+<input type="text" name="software"
 value="<?php echo($_SESSION['software']); ?>"
 >
 </p>
@@ -72,7 +72,7 @@ value="<?php echo($_SESSION['cert_secret']); ?>"
 </p>
 <p>
 <input type="submit" value="Set Data in Session">
-<input type="submit" value="Clear All" 
+<input type="submit" value="Clear All"
           onclick="window.location='toolsetup.php?certaction=reset'; return false;"/>
 </p>
 </form>
